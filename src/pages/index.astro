@@ -3,12 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import BannerCarousel from '../components/BannerCarousel.astro';
 
 const bannerImages = [
-	'/images/banner/banner_1.jpg',
-	'/images/banner/banner_2.jpg',
-	'/images/banner/banner_3.jpg',
-	'/images/banner/banner_4.jpg',
-	'/images/banner/banner_5.jpg',
+	`${import.meta.env.BASE_URL}images/banner/banner_1.jpg`,
+	`${import.meta.env.BASE_URL}images/banner/banner_2.jpg`,
+	`${import.meta.env.BASE_URL}images/banner/banner_3.jpg`,
+	`${import.meta.env.BASE_URL}images/banner/banner_4.jpg`,
+	`${import.meta.env.BASE_URL}images/banner/banner_5.jpg`,
 ] as const;
+
+const basePath = import.meta.env.BASE_URL;
 ---
 
 <Layout title="首頁">
@@ -20,7 +22,7 @@ const bannerImages = [
 				<div class="max-w-2xl text-white">
 					<h1 class="text-5xl font-bold mb-6">高島名床</h1>
 					<p class="text-xl mb-8">源自日本高島山的靈感，為您打造最舒適的睡眠體驗</p>
-					<a href="/products/beds" class="btn-primary">
+					<a href={`${basePath}products/beds`} class="btn-primary">
 						探索產品
 					</a>
 				</div>
@@ -68,7 +70,7 @@ const bannerImages = [
 			<div class="container mx-auto px-4">
 				<h2 class="section-title">產品系列</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					<a href="/products/pillows" class="group">
+					<a href={`${basePath}products/pillows`} class="group">
 						<div class="card">
 							<div class="aspect-w-16 aspect-h-9 bg-nature-light bg-opacity-20"></div>
 							<div class="p-6">
@@ -77,7 +79,7 @@ const bannerImages = [
 							</div>
 						</div>
 					</a>
-					<a href="/products/beds" class="group">
+					<a href={`${basePath}products/beds`} class="group">
 						<div class="card">
 							<div class="aspect-w-16 aspect-h-9 bg-nature-light bg-opacity-20"></div>
 							<div class="p-6">
@@ -86,7 +88,7 @@ const bannerImages = [
 							</div>
 						</div>
 					</a>
-					<a href="/products/bedside-tables" class="group">
+					<a href={`${basePath}products/bedside-tables`} class="group">
 						<div class="card">
 							<div class="aspect-w-16 aspect-h-9 bg-nature-light bg-opacity-20"></div>
 							<div class="p-6">

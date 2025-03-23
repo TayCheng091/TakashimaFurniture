@@ -6,6 +6,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const logoPath = `${import.meta.env.BASE_URL}logo.png`;
+const basePath = import.meta.env.BASE_URL;
 ---
 
 <!DOCTYPE html>
@@ -14,7 +16,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="高島名床 - 專業寢具品牌" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/logo.png" />
+		<link rel="icon" type="image/png" href={logoPath} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title} | 高島名床</title>
 	</head>
@@ -22,17 +24,17 @@ const { title } = Astro.props;
 		<header class="bg-white shadow-sm">
 			<nav class="container mx-auto px-4 py-4">
 				<div class="flex items-center justify-between">
-					<a href="/" class="flex items-center space-x-2">
-						<img src="/logo.png" alt="高島名床 Logo" class="h-8" />
+					<a href={basePath} class="flex items-center space-x-2">
+						<img src={logoPath} alt="高島名床 Logo" class="h-8" />
 						<span class="text-2xl font-bold text-nature-dark">高島名床</span>
 					</a>
 					<div class="hidden md:flex space-x-8">
-						<a href="/products/pillows" class="text-gray-600 hover:text-nature-primary transition-colors">枕頭</a>
-						<a href="/products/beds" class="text-gray-600 hover:text-nature-primary transition-colors">床</a>
-						<a href="/products/bedside-tables" class="text-gray-600 hover:text-nature-primary transition-colors">床頭櫃</a>
+						<a href={`${basePath}products/pillows`} class="text-gray-600 hover:text-nature-primary transition-colors">枕頭</a>
+						<a href={`${basePath}products/beds`} class="text-gray-600 hover:text-nature-primary transition-colors">床</a>
+						<a href={`${basePath}products/bedside-tables`} class="text-gray-600 hover:text-nature-primary transition-colors">床頭櫃</a>
 						{/* <a href="/products/sofas" class="text-gray-600 hover:text-gray-900">沙發</a> */}
-						<a href="/about" class="text-gray-600 hover:text-nature-primary transition-colors">關於我們</a>
-						<a href="/contact" class="text-gray-600 hover:text-nature-primary transition-colors">聯絡我們</a>
+						<a href={`${basePath}about`} class="text-gray-600 hover:text-nature-primary transition-colors">關於我們</a>
+						<a href={`${basePath}contact`} class="text-gray-600 hover:text-nature-primary transition-colors">聯絡我們</a>
 					</div>
 				</div>
 			</nav>
