@@ -2,13 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import BannerCarousel from '../components/BannerCarousel.astro';
 
+const basePath = import.meta.env.BASE_URL + '/';
 const bannerImages = [
-  '/images/banner/banner_1.jpg',
-  '/images/banner/banner_2.jpg',
-  '/images/banner/banner_3.jpg',
-  '/images/banner/banner_4.jpg',
-  '/images/banner/banner_5.jpg',
-];
+	`${basePath}images/banner/banner_1.jpg`,
+	`${basePath}images/banner/banner_2.jpg`,
+	`${basePath}images/banner/banner_3.jpg`,
+	`${basePath}images/banner/banner_4.jpg`,
+	`${basePath}images/banner/banner_5.jpg`,
+] as const;
 ---
 
 <Layout title="關於我們">

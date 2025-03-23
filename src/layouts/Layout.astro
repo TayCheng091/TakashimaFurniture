@@ -6,8 +6,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const logoPath = `${import.meta.env.BASE_URL}logo.png`;
-const basePath = import.meta.env.BASE_URL;
+const basePath = import.meta.env.BASE_URL + '/';
+const logoPath = `${basePath}logo.png`;
 ---
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ const basePath = import.meta.env.BASE_URL;
 		<header class="bg-white shadow-sm">
 			<nav class="container mx-auto px-4 py-4">
 				<div class="flex items-center justify-between">
-					<a href={basePath} class="flex items-center space-x-2">
+					<a href={basePath || '/'} class="flex items-center space-x-2">
 						<img src={logoPath} alt="高島名床 Logo" class="h-8" />
 						<span class="text-2xl font-bold text-nature-dark">高島名床</span>
 					</a>
@@ -32,7 +32,7 @@ const basePath = import.meta.env.BASE_URL;
 						<a href={`${basePath}products/pillows`} class="text-gray-600 hover:text-nature-primary transition-colors">枕頭</a>
 						<a href={`${basePath}products/beds`} class="text-gray-600 hover:text-nature-primary transition-colors">床</a>
 						<a href={`${basePath}products/bedside-tables`} class="text-gray-600 hover:text-nature-primary transition-colors">床頭櫃</a>
-						{/* <a href="/products/sofas" class="text-gray-600 hover:text-gray-900">沙發</a> */}
+						{/* <a href={`${basePath}products/sofas`} class="text-gray-600 hover:text-gray-900">沙發</a> */}
 						<a href={`${basePath}about`} class="text-gray-600 hover:text-nature-primary transition-colors">關於我們</a>
 						<a href={`${basePath}contact`} class="text-gray-600 hover:text-nature-primary transition-colors">聯絡我們</a>
 					</div>

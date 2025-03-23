@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: "https://TayCheng091.github.io",
-  base: process.env.NODE_ENV === "production" ? "/TakashimaFurniture" : "",
+  base: "/TakashimaFurniture",
 });
