@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductList from '../../components/ProductList.astro';
+import type { Product } from '../../types/product';
+
+const products: Product[] = [
+  {
+    id: 'pillow-1',
+    name: '頂級松針枕',
+    description: '採用台灣高山特級松針製成，每一根松針都經過嚴格篩選。蓬鬆柔軟的支撐感，搭配松針天然的芬多精，讓您在淡淀的森林香氣中安然入睡。',
+    price: 5990,
+    image: '/images/products/pillows/pine-needle-pillow.webp',
+    category: 'pillows'
+  },
+  {
+    id: 'pillow-2',
+    name: '乳膠枕',
+    description: '採用100%天然乳膠材質，具有優異的透氣性與彈性，能完美貼合頸部曲線。特殊防螨抗菌處理，為您打造健康舒適的睡眠環境。',
+    price: 3990,
+    image: '/images/products/pillows/latex-pillow.webp',
+    category: 'pillows'
+  },
+  {
+    id: 'pillow-3',
+    name: '羽絨枕',
+    description: '精選優質白鵝絨，蓬鬆度達800以上，輕柔舒適且保暖性佳。特殊防過敏處理，讓您享受如雲朵般的柔軟觸感。',
+    price: 4990,
+    image: '/images/products/pillows/fur-pillow.webp',
+    category: 'pillows'
+  }
+];
+---
+
+<Layout title="枕頭系列">
+  <div class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+      <h1 class="text-4xl font-bold text-center mb-8">枕頭系列</h1>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+        我們提供多種優質枕頭選擇，從記憶枕到羽絨枕，每一款都經過精心設計，
+        為您打造最舒適的睡眠體驗。
+      </p>
+      <ProductList products={products} />
+    </div>
+  </div>
+</Layout> 

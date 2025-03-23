@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductList from '../../components/ProductList.astro';
+import type { Product } from '../../types/product';
+
+const products: Product[] = [
+  {
+    id: 'bedside-1',
+    name: '大自然巨石陣床頭櫃',
+    description: '靈感源自大自然的鬼斧神工，以整塊天然原石為基底，經過匠人精心雕琢。每一件作品都保留石材原始的紋理與質感，搭配現代工藝處理。',
+    price: 5990,
+    image: '/images/products/bedside-tables/rock-bedside-tables.webp',
+    category: 'bedside-tables'
+  },
+  {
+    id: 'bedside-2',
+    name: '日式收納床頭櫃',
+    description: '多層收納設計，適合小空間使用。採用天然竹材製作，輕巧耐用，搭配日式簡約風格，為您的臥室增添一份寧靜優雅。',
+    price: 4990,
+    image: '/images/products/bedside-tables/japanese-bedside-table.webp',
+    category: 'bedside-tables'
+  },
+  {
+    id: 'bedside-3',
+    name: '歐式古典床頭櫃',
+    description: '精緻雕花設計，搭配復古銅把手。採用實木框架，表面經過特殊處理，呈現出優雅的復古光澤，完美詮釋歐式古典風格。',
+    price: 7990,
+    image: '/images/products/bedside-tables/european-bedside-table.webp',
+    category: 'bedside-tables'
+  }
+];
+---
+
+<Layout title="床頭櫃系列">
+  <div class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+      <h1 class="text-4xl font-bold text-center mb-8">床頭櫃系列</h1>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+        我們提供多種風格的床頭櫃選擇，從現代簡約到古典優雅，
+        每一款都經過精心設計，為您的臥室增添實用與美感。
+      </p>
+      <ProductList products={products} />
+    </div>
+  </div>
+</Layout> 

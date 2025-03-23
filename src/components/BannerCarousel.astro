@@ -1,0 +1,64 @@
+---
+interface Props {
+  images: string[];
+  height: string;
+}
+
+const { images, height } = Astro.props;
+---
+
+<div class="banner-carousel" style={`height: ${height}`}>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {
+        images.map((image) => (
+          <div class="swiper-slide">
+            <img
+              src={image}
+              alt="Banner"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black opacity-10" />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .banner-carousel {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+</style>
+
+<script>
+  import Swiper from 'swiper';
+  import { Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+
+  new Swiper('.swiper', {
+    modules: [Autoplay],
+    loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    effect: 'slide',
+    speed: 1000,
+  });
+</script> 

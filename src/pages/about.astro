@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BannerCarousel from '../components/BannerCarousel.astro';
+
+const bannerImages = [
+  '/images/banner/banner_1.jpg',
+  '/images/banner/banner_2.jpg',
+  '/images/banner/banner_3.jpg',
+  '/images/banner/banner_4.jpg',
+  '/images/banner/banner_5.jpg',
+];
+---
+
+<Layout title="關於我們">
+  <div class="bg-white min-h-screen">
+    <!-- Hero Section -->
+    <div class="relative h-[400px]">
+      <BannerCarousel images={bannerImages} height="400px" />
+      <div class="relative container mx-auto px-4 h-full flex items-center z-10">
+        <div class="max-w-2xl text-white">
+          <h1 class="text-5xl font-bold mb-6">關於高島名床</h1>
+          <p class="text-xl">源自日本高島山的靈感，為您打造最舒適的睡眠體驗</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Story Section -->
+    <div class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-center">品牌故事</h2>
+          <div class="prose prose-lg mx-auto">
+            <p class="mb-6">
+              高島名床的創始人是一位熱愛登山的家具設計師。在一次攀登日本高島山的旅程中，
+              他被山間清新的空氣和寧靜的氛圍所感動，這份感動成為了創立品牌的靈感來源。
+            </p>
+            <p class="mb-6">
+              我們相信，優質的睡眠環境應該像高島山的空氣一樣清新自然，像山間的寧靜一樣讓人放鬆。
+              因此，我們致力於為每一位顧客打造最舒適的睡眠環境。
+            </p>
+            <p class="mb-6">
+              我們的產品採用最優質的材料，結合現代科技與傳統工藝，每一件家具都經過精心設計和嚴格把關，
+              確保為您提供最佳的睡眠體驗。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Values Section -->
+    <div class="bg-gray-50 py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">我們的價值觀</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">品質至上</h3>
+            <p class="text-gray-600">嚴選材料，精工製作，確保每一件產品都達到最高標準</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">創新設計</h3>
+            <p class="text-gray-600">結合現代科技與傳統工藝，打造獨特的產品設計</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">顧客至上</h3>
+            <p class="text-gray-600">以客為尊，提供專業的服務和建議</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout> 

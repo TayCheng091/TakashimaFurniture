@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductList from '../../components/ProductList.astro';
+import type { Product } from '../../types/product';
+
+const products: Product[] = [
+  {
+    id: 'bed-1',
+    name: '台灣頂級松琛床',
+    description: '採用台灣高山特級松針，蓬鬆柔軟卻帶有絕佳支撐力。每一根松針都經過精心挑選，搭配特殊工藝處理，為您打造最舒適的睡眠體驗。',
+    price: 29900,
+    image: '/images/products/beds/pine-needle-bed.webp',
+    category: 'beds'
+  },
+  {
+    id: 'bed-2',
+    name: '日式榻榻米床',
+    description: '傳統日式設計，低床身設計適合小空間。採用天然藺草編織，散發淡淡草香，搭配現代化支撐系統，完美結合傳統與現代。',
+    price: 19900,
+    image: '/images/products/beds/tatami-bed.webp',
+    category: 'beds'
+  },
+  {
+    id: 'bed-3',
+    name: '歐式古典床',
+    description: '精緻雕花設計，高貴典雅。採用實木框架，搭配高級布面材質，完美呈現歐式古典風格。特殊防蟲處理，確保使用壽命。',
+    price: 39900,
+    image: '/images/products/beds/european-classic-bed.webp',
+    category: 'beds'
+  }
+];
+---
+
+<Layout title="床系列">
+  <div class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+      <h1 class="text-4xl font-bold text-center mb-8">床系列</h1>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+        我們提供多種風格的床架選擇，從現代簡約到古典優雅，
+        每一款都經過精心設計，為您打造最舒適的睡眠空間。
+      </p>
+      <ProductList products={products} />
+    </div>
+  </div>
+</Layout> 
