@@ -1,0 +1,47 @@
+<!DOCTYPE html>/*
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductList from '../../components/ProductList.astro';
+import type { Product } from '../../types/product';
+
+const products: Product[] = [
+  {
+    id: 'sofa-1',
+    name: '現代三人沙發',
+    description: '簡約線條設計，高級布面材質，舒適耐用',
+    price: 29900,
+    image: '/images/products/sofas/modern-sofa.webp',
+    category: 'sofas'
+  },
+  {
+    id: 'sofa-2',
+    name: 'L型沙發',
+    description: '多功能設計，可調整靠背角度，適合小空間',
+    price: 39900,
+    image: '/images/products/sofas/l-shaped-sofa.webp',
+    category: 'sofas'
+  },
+  {
+    id: 'sofa-3',
+    name: '復古單人沙發',
+    description: '復古設計風格，真皮材質，彰顯品味',
+    price: 19900,
+    image: '/images/products/sofas/vintage-sofa.webp',
+    category: 'sofas'
+  }
+];
+---
+
+<Layout title="沙發系列">
+  <div class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+      <h1 class="text-4xl font-bold text-center mb-8">沙發系列</h1>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+        我們提供多種風格的沙發選擇，從現代簡約到復古優雅，
+        每一款都經過精心設計，為您的客廳增添舒適與美感。
+      </p>
+      <ProductList products={products} />
+    </div>
+  </div>
+</Layout>
+*/
