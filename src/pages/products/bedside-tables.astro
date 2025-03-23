@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import ProductList from '../../components/ProductList.astro';
 import type { Product } from '../../types/product';
 
-const products: Product[] = [
+const products = [
   {
     id: 'bedside-1',
     name: '大自然巨石陣床頭櫃',
@@ -28,7 +28,7 @@ const products: Product[] = [
     image: '/images/products/bedside-tables/european-bedside-table.webp',
     category: 'bedside-tables'
   }
-];
+] as Product[];
 ---
 
 <Layout title="床頭櫃系列">

@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import ProductList from '../../components/ProductList.astro';
 import type { Product } from '../../types/product';
 
-const products: Product[] = [
+const products = [
   {
     id: 'bed-1',
     name: '台灣頂級松琛床',
@@ -28,7 +28,7 @@ const products: Product[] = [
     image: '/images/products/beds/european-classic-bed.webp',
     category: 'beds'
   }
-];
+] as Product[];
 ---
 
 <Layout title="床系列">

@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import ProductList from '../../components/ProductList.astro';
 import type { Product } from '../../types/product';
 
-const products: Product[] = [
+const products = [
   {
     id: 'pillow-1',
     name: '頂級松針枕',
@@ -28,7 +28,7 @@ const products: Product[] = [
     image: '/images/products/pillows/fur-pillow.webp',
     category: 'pillows'
   }
-];
+] as Product[];
 ---
 
 <Layout title="枕頭系列">

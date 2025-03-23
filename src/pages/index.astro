@@ -2,16 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import BannerCarousel from '../components/BannerCarousel.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-
 const bannerImages = [
 	'/images/banner/banner_1.jpg',
 	'/images/banner/banner_2.jpg',
 	'/images/banner/banner_3.jpg',
 	'/images/banner/banner_4.jpg',
 	'/images/banner/banner_5.jpg',
-];
+] as const;
 ---
 
 <Layout title="首頁">
